@@ -2,7 +2,7 @@ package Oppgave3;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.stream.Collectors;
 
 import Oppgave2.Ansatt;
 import Oppgave2.Kjonn;
@@ -54,9 +54,10 @@ List<Ansatt> ansatte = new ArrayList<>();
 		ansatte.add(a5);
 		
 		// a
-		ansatte.stream()
+		List<String> etterNavnListe = ansatte.stream()
 		.map(Ansatt::getEtternavn)
-		.forEach(System.out::println);
+		.collect(Collectors.toList());
+		etterNavnListe.forEach(System.out::println);
 		
 	
 		//b
