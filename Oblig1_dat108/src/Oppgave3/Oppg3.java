@@ -54,10 +54,10 @@ List<Ansatt> ansatte = new ArrayList<>();
 		ansatte.add(a5);
 		
 		// a
-		List<String> etterNavnListe = ansatte.stream()
+		List<String> etterNavnEgenListe = ansatte.stream()
 		.map(Ansatt::getEtternavn)
 		.collect(Collectors.toList());
-		etterNavnListe.forEach(System.out::println);
+		etterNavnEgenListe.forEach(System.out::println);
 		
 	
 		//b
